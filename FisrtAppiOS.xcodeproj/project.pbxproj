@@ -29,12 +29,18 @@
 		6E4FA276173D17CF008C5F70 /* AlumnosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA275173D17CF008C5F70 /* AlumnosTableViewController.m */; };
 		6E4FA27A173D1C05008C5F70 /* SWCellAlumno.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA279173D1C05008C5F70 /* SWCellAlumno.m */; };
 		6E4FA27C173D209A008C5F70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4FA27B173D209A008C5F70 /* MapKit.framework */; };
+		6EBE610E1757658E0019FF07 /* SWAlumnoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE610D1757658E0019FF07 /* SWAlumnoDetailViewController.m */; };
+		6EBE61101757673D0019FF07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBE610F1757673D0019FF07 /* CoreLocation.framework */; };
+		6EBE6112175767500019FF07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBE6111175767500019FF07 /* CoreMotion.framework */; };
+		6EBE611517576BD20019FF07 /* CiticAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE611417576BD20019FF07 /* CiticAnnotation.m */; };
+		6EBE6118175770010019FF07 /* SWLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE6116175770010019FF07 /* SWLocationManager.m */; };
+		6EBE611B17577A000019FF07 /* BasicAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE611A17577A000019FF07 /* BasicAnnotation.m */; };
 		6EC05058174E0BCC006047DE /* Alumno.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC05057174E0BCC006047DE /* Alumno.m */; };
 		6EC0505C174E23AC006047DE /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0505B174E23AC006047DE /* SQLiteAccess.m */; };
 		6EC0505E174E24C6006047DE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC0505D174E24C6006047DE /* libsqlite3.dylib */; };
 		6EC0505F174E2552006047DE /* SQLiteAccess.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0505A174E23AC006047DE /* SQLiteAccess.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6EC05060174E2552006047DE /* SQLiteAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0505B174E23AC006047DE /* SQLiteAccess.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6EC05063174E2634006047DE /* SWClasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC05062174E2634006047DE /* SWClasesViewController.m */; };
+		6EC05063174E2634006047DE /* SWClasesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC05062174E2634006047DE /* SWClasesTableViewController.m */; };
 		6EC05066174E28C6006047DE /* Clase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC05065174E28C6006047DE /* Clase.m */; };
 		6EC05068174E2976006047DE /* citic.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6EC05067174E2976006047DE /* citic.sqlite */; };
 		6EC0506C174E29BA006047DE /* SQLiteAccess+Clases.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0506B174E29BA006047DE /* SQLiteAccess+Clases.m */; };
@@ -100,13 +106,24 @@
 		6E4FA278173D1C05008C5F70 /* SWCellAlumno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellAlumno.h; sourceTree = "<group>"; };
 		6E4FA279173D1C05008C5F70 /* SWCellAlumno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellAlumno.m; sourceTree = "<group>"; };
 		6E4FA27B173D209A008C5F70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6E90D4441757F3A1002A3A9A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6EBE610C1757658E0019FF07 /* SWAlumnoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWAlumnoDetailViewController.h; path = Controllers/SWAlumnoDetailViewController.h; sourceTree = "<group>"; };
+		6EBE610D1757658E0019FF07 /* SWAlumnoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWAlumnoDetailViewController.m; path = Controllers/SWAlumnoDetailViewController.m; sourceTree = "<group>"; };
+		6EBE610F1757673D0019FF07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6EBE6111175767500019FF07 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6EBE611317576BD20019FF07 /* CiticAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CiticAnnotation.h; path = Models/CiticAnnotation.h; sourceTree = "<group>"; };
+		6EBE611417576BD20019FF07 /* CiticAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CiticAnnotation.m; path = Models/CiticAnnotation.m; sourceTree = "<group>"; };
+		6EBE6116175770010019FF07 /* SWLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLocationManager.m; sourceTree = "<group>"; };
+		6EBE6117175770010019FF07 /* SWLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLocationManager.h; sourceTree = "<group>"; };
+		6EBE611917577A000019FF07 /* BasicAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAnnotation.h; path = Models/BasicAnnotation.h; sourceTree = "<group>"; };
+		6EBE611A17577A000019FF07 /* BasicAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicAnnotation.m; path = Models/BasicAnnotation.m; sourceTree = "<group>"; };
 		6EC05056174E0BCC006047DE /* Alumno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alumno.h; path = Models/Alumno.h; sourceTree = "<group>"; };
 		6EC05057174E0BCC006047DE /* Alumno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alumno.m; path = Models/Alumno.m; sourceTree = "<group>"; };
 		6EC0505A174E23AC006047DE /* SQLiteAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteAccess.h; sourceTree = "<group>"; };
 		6EC0505B174E23AC006047DE /* SQLiteAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccess.m; sourceTree = "<group>"; };
 		6EC0505D174E24C6006047DE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		6EC05061174E2634006047DE /* SWClasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWClasesViewController.h; path = Controllers/SWClasesViewController.h; sourceTree = "<group>"; };
-		6EC05062174E2634006047DE /* SWClasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWClasesViewController.m; path = Controllers/SWClasesViewController.m; sourceTree = "<group>"; };
+		6EC05061174E2634006047DE /* SWClasesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWClasesTableViewController.h; path = Controllers/SWClasesTableViewController.h; sourceTree = "<group>"; };
+		6EC05062174E2634006047DE /* SWClasesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWClasesTableViewController.m; path = Controllers/SWClasesTableViewController.m; sourceTree = "<group>"; };
 		6EC05064174E28C6006047DE /* Clase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Clase.h; path = Models/Clase.h; sourceTree = "<group>"; };
 		6EC05065174E28C6006047DE /* Clase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Clase.m; path = Models/Clase.m; sourceTree = "<group>"; };
 		6EC05067174E2976006047DE /* citic.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = citic.sqlite; sourceTree = "<group>"; };
@@ -158,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBE6112175767500019FF07 /* CoreMotion.framework in Frameworks */,
+				6EBE61101757673D0019FF07 /* CoreLocation.framework in Frameworks */,
 				6EC0505E174E24C6006047DE /* libsqlite3.dylib in Frameworks */,
 				6E4FA27C173D209A008C5F70 /* MapKit.framework in Frameworks */,
 				6E4FA22C173D1108008C5F70 /* UIKit.framework in Frameworks */,
@@ -182,6 +201,8 @@
 		6E4FA21F173D1108008C5F70 = {
 			isa = PBXGroup;
 			children = (
+				6EBE6111175767500019FF07 /* CoreMotion.framework */,
+				6EBE610F1757673D0019FF07 /* CoreLocation.framework */,
 				6EC0505D174E24C6006047DE /* libsqlite3.dylib */,
 				6E4FA27B173D209A008C5F70 /* MapKit.framework */,
 				6E4FA231173D1108008C5F70 /* FisrtAppiOS */,
@@ -283,6 +304,10 @@
 				6EC05065174E28C6006047DE /* Clase.m */,
 				6EE0966A174F58CF005E8BD1 /* SWResource.h */,
 				6EE0966B174F58CF005E8BD1 /* SWResource.m */,
+				6EBE611317576BD20019FF07 /* CiticAnnotation.h */,
+				6EBE611417576BD20019FF07 /* CiticAnnotation.m */,
+				6EBE611917577A000019FF07 /* BasicAnnotation.h */,
+				6EBE611A17577A000019FF07 /* BasicAnnotation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -292,14 +317,16 @@
 			children = (
 				6E4FA274173D17CF008C5F70 /* AlumnosTableViewController.h */,
 				6E4FA275173D17CF008C5F70 /* AlumnosTableViewController.m */,
-				6EC05061174E2634006047DE /* SWClasesViewController.h */,
-				6EC05062174E2634006047DE /* SWClasesViewController.m */,
+				6EC05061174E2634006047DE /* SWClasesTableViewController.h */,
+				6EC05062174E2634006047DE /* SWClasesTableViewController.m */,
 				6EE09690174F6368005E8BD1 /* SWResourcesTableViewController.h */,
 				6EE09691174F6368005E8BD1 /* SWResourcesTableViewController.m */,
 				6EE096B0174F75E8005E8BD1 /* SWResourceDeteailViewController.h */,
 				6EE096B1174F75E8005E8BD1 /* SWResourceDeteailViewController.m */,
 				6EE096B3174F8AB9005E8BD1 /* SWResourceFormViewController.h */,
 				6EE096B4174F8ABA005E8BD1 /* SWResourceFormViewController.m */,
+				6EBE610C1757658E0019FF07 /* SWAlumnoDetailViewController.h */,
+				6EBE610D1757658E0019FF07 /* SWAlumnoDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -316,12 +343,15 @@
 		6EC05059174E2361006047DE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6EBE6116175770010019FF07 /* SWLocationManager.m */,
+				6EBE6117175770010019FF07 /* SWLocationManager.h */,
 				6EC05075174E4266006047DE /* MBProgressHUD.m */,
 				6EC05076174E4266006047DE /* MBProgressHUD.h */,
 				6EC0506F174E305A006047DE /* BaseXmlParser.h */,
 				6EC05070174E305A006047DE /* BaseXmlParser.m */,
 				6EC0505A174E23AC006047DE /* SQLiteAccess.h */,
 				6EC0505B174E23AC006047DE /* SQLiteAccess.m */,
+				6E90D4441757F3A1002A3A9A /* Constants.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -501,7 +531,7 @@
 				6E4FA276173D17CF008C5F70 /* AlumnosTableViewController.m in Sources */,
 				6E4FA27A173D1C05008C5F70 /* SWCellAlumno.m in Sources */,
 				6EC05058174E0BCC006047DE /* Alumno.m in Sources */,
-				6EC05063174E2634006047DE /* SWClasesViewController.m in Sources */,
+				6EC05063174E2634006047DE /* SWClasesTableViewController.m in Sources */,
 				6EC05066174E28C6006047DE /* Clase.m in Sources */,
 				6EC0506C174E29BA006047DE /* SQLiteAccess+Clases.m in Sources */,
 				6EC05071174E305A006047DE /* BaseXmlParser.m in Sources */,
@@ -522,6 +552,10 @@
 				6EE096B2174F75E8005E8BD1 /* SWResourceDeteailViewController.m in Sources */,
 				6EE096B5174F8ABA005E8BD1 /* SWResourceFormViewController.m in Sources */,
 				6EE096B8174F8F94005E8BD1 /* WSPostResource.m in Sources */,
+				6EBE610E1757658E0019FF07 /* SWAlumnoDetailViewController.m in Sources */,
+				6EBE611517576BD20019FF07 /* CiticAnnotation.m in Sources */,
+				6EBE6118175770010019FF07 /* SWLocationManager.m in Sources */,
+				6EBE611B17577A000019FF07 /* BasicAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

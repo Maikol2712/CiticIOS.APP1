@@ -10,7 +10,7 @@
 
 @implementation Alumno
 
-@synthesize name, lastname, city, email;
+@synthesize name, lastname, city, email, avatarUrl, avatarString;
 
 - (id)initWithCoder:(NSCoder *)coder {
 #ifndef NDEBUG

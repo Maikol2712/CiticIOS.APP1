@@ -7,19 +7,27 @@
 //
 #import "Clase.h"
 #import "SQLiteAccess+Clases.h"
-#import "SWClasesViewController.h"
+#import "SWClasesTableViewController.h"
 
-@interface SWClasesViewController ()
+@interface SWClasesTableViewController ()
 
 @end
 
-@implementation SWClasesViewController
+@implementation SWClasesTableViewController
 
 @synthesize clases;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     clases = [NSMutableArray arrayWithArray:[SQLiteAccess getAllSessions]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+#ifndef NDEBUG
+    NSLog(@"[%@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#endif
+    
+    self.tableView.editing = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,44 +56,45 @@
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#ifndef NDEBUG
+    NSLog(@"[%@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#endif
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        [clases removeObjectAtIndex:indexPath.row];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        NSLog(@"Insertar celda");
     }   
 }
-*/
 
-/*
+
+
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    
+    NSLog(@"Moviendo %i a %i", fromIndexPath.row, toIndexPath.row);
 }
-*/
 
-/*
+
+
 // Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-*/
+
 
 #pragma mark - Table view delegate
 
@@ -100,4 +109,15 @@
      */
 }
 
+- (IBAction)editMode:(id)sender {
+#ifndef NDEBUG
+    NSLog(@"[%@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#endif
+    
+    if (self.tableView.editing) {
+        self.tableView.editing = NO;
+    } else {
+        self.tableView.editing = YES;
+    }
+}
 @end

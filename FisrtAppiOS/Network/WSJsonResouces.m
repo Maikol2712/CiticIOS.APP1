@@ -21,7 +21,7 @@
     
     controller = aController;
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://10.19.17.63:3000/resources.json"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/resources.json", kLocalUrl]]];
     
     AFJSONRequestOperation *connection = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
 success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
