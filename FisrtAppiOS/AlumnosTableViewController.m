@@ -9,6 +9,8 @@
 #import "SWCellAlumno.h"
 #import "WSAlumnosXML.h"
 #import "AlumnosTableViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import "SWAlumnoDetailViewController.h"
 
 @interface AlumnosTableViewController ()
 
@@ -86,6 +88,11 @@
     [cell.nameLbl setText:[NSString stringWithFormat:@"%@ %@", tmp.name, tmp.lastname]];
     [cell.emailLbl setText:tmp.email];
     [cell.cityLbl setText:tmp.city];
+#ifndef NDEBUG
+    NSLog(@"[%@] %@ - %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), tmp.avatarUrl.absoluteString);
+#endif
+    [cell.avatarImageView setImageWithURL:tmp.avatarUrl
+                         placeholderImage:[UIImage imageNamed:@"first.png"]];
     
     return cell;
 }
@@ -130,14 +137,31 @@
 */
 
 #pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 #ifndef NDEBUG
     NSLog(@"[%@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 #endif
     
-    [self performSegueWithIdentifier:@"AlumnosDetail" sender:tableView];
+    [self performSegueWithIdentifier:@"AlumnosDetail" sender:indexPath];
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+#ifndef NDEBUG
+    NSLog(@"[%@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#endif
+    NSIndexPath *indexPath = (NSIndexPath *)sender;
+    Alumno *tmp = [alumnos objectAtIndex:indexPath.row];
+    
+    SWAlumnoDetailViewController *tmpController = segue.destinationViewController;
+    tmpController.alumno = tmp;
+}
+
+
+
+
+
+
+
 
 @end

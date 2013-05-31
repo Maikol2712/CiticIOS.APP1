@@ -18,7 +18,7 @@
     // Asignamos para el protocolo informal
     controller = aController;
     
-    NSURL *url = [NSURL URLWithString:@"http://10.19.17.63:3000/stundents.xml"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/stundents.xml", kLocalUrl]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
     
@@ -84,15 +84,24 @@
 #ifndef NDEBUG
     NSLog(@"[%@] %@ EN:%@ CONT:%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), elementName, _contentsOfElement);
 #endif
+    NSString *cleanString = [_contentsOfElement stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if ([elementName isEqualToString:@"name"]) {
-        [tmpAlumno setName:_contentsOfElement];
+        [tmpAlumno setName:cleanString];
     } else if ([elementName isEqualToString:@"lastname"]) {
-        [tmpAlumno setLastname:_contentsOfElement];
+        [tmpAlumno setLastname:cleanString];
     } else if ([elementName isEqualToString:@"city"]) {
-        [tmpAlumno setCity:_contentsOfElement];
+        [tmpAlumno setCity:cleanString];
     } else if ([elementName isEqualToString:@"email"]) {
-        [tmpAlumno setEmail:_contentsOfElement];
+        [tmpAlumno setEmail:cleanString];
+    } else if ([elementName isEqualToString:@"image-url"]) {
+        
+#ifndef NDEBUG
+        NSLog(@"[%@] %@ Read image-url %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), cleanString);
+#endif
+        
+        NSString *urlString = [NSString stringWithFormat:@"http://10.19.17.63:3000%@", cleanString];
+        [tmpAlumno setAvatarUrl:[[NSURL alloc] initWithString:urlString]];
     }
     
     if ([elementName isEqualToString:@"stundent"]) {

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SWClasesViewController : UITableViewController
+@interface SWClasesTableViewController : UITableViewController
 
 @property (nonatomic, retain) NSMutableArray *clases;
+- (IBAction)editMode:(id)sender;
 
 @end

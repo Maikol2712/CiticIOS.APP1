@@ -10,9 +10,11 @@
 
 @interface Alumno : NSObject
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *lastname;
-@property (nonatomic, retain) NSString *city;
-@property (nonatomic, retain) NSString *email;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *lastname;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, retain) NSURL *avatarUrl;
+@property (nonatomic, strong) NSString *avatarString;
 
 @end

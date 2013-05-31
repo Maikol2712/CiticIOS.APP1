@@ -13,6 +13,8 @@
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="sXC-B1-7yh" kind="relationship" relationship="viewControllers" id="Egl-a2-cZ3"/>
@@ -25,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-1542" y="812"/>
         </scene>
-        <!--Alumnos Table View Controller - Root View Controller-->
+        <!--Alumnos Table View Controller - Alumnos-->
         <scene sceneID="YXr-sY-dw9">
             <objects>
                 <tableViewController id="yQW-1O-q0D" customClass="AlumnosTableViewController" sceneMemberID="viewController">
@@ -42,47 +44,50 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nombre del alumno" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-fa-T6o">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="7xL-a5-2MO"/>
+                                                <constraint firstAttribute="width" constant="224" id="z6A-fY-RvS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="21"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-s5-ner">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="66z-4O-w2P"/>
                                                 <constraint firstAttribute="width" constant="148" id="akZ-tT-w5M"/>
+                                                <constraint firstAttribute="height" constant="21" id="fty-Ig-D3F"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ciudad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-oO-1VN">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="vx2-1S-ViR"/>
+                                                <constraint firstAttribute="height" constant="21" id="rUN-gf-KUY"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="first@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="WYu-XV-MQA">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="first@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="WYu-XV-MQA">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="48" id="ppj-oh-0Hd"/>
+                                                <constraint firstAttribute="width" constant="103" id="LyV-hm-KaX"/>
+                                                <constraint firstAttribute="height" constant="98" id="fLX-03-Ku2"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="ZyN-oO-1VN" firstAttribute="trailing" secondItem="6dC-s5-ner" secondAttribute="trailing" type="default" id="1LW-17-bYz"/>
-                                    <constraint firstItem="WYu-XV-MQA" firstAttribute="bottom" secondItem="ZyN-oO-1VN" secondAttribute="bottom" type="default" id="BEg-Ly-e9e"/>
-                                    <constraint firstItem="ZyN-oO-1VN" firstAttribute="top" secondItem="6dC-s5-ner" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FJF-f1-a1s"/>
-                                    <constraint firstItem="6dC-s5-ner" firstAttribute="top" secondItem="QU7-fa-T6o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="U0F-OT-GFt"/>
-                                    <constraint firstAttribute="trailing" secondItem="QU7-fa-T6o" secondAttribute="trailing" constant="20" type="default" id="V0F-Mr-BD9"/>
-                                    <constraint firstItem="ZyN-oO-1VN" firstAttribute="leading" secondItem="L0y-FE-Uwe" secondAttribute="leading" constant="20" type="default" id="eRE-8Q-inu"/>
-                                    <constraint firstAttribute="trailing" secondItem="WYu-XV-MQA" secondAttribute="trailing" constant="20" type="default" id="eU1-qo-p3t"/>
-                                    <constraint firstItem="QU7-fa-T6o" firstAttribute="top" secondItem="L0y-FE-Uwe" secondAttribute="top" constant="8" id="rXc-om-dJC"/>
-                                    <constraint firstItem="WYu-XV-MQA" firstAttribute="top" secondItem="QU7-fa-T6o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tLf-NB-HvA"/>
-                                    <constraint firstItem="6dC-s5-ner" firstAttribute="leading" secondItem="L0y-FE-Uwe" secondAttribute="leading" constant="20" type="default" id="tjD-uZ-oOy"/>
-                                    <constraint firstItem="QU7-fa-T6o" firstAttribute="leading" secondItem="L0y-FE-Uwe" secondAttribute="leading" constant="20" type="default" id="zuw-bP-obn"/>
+                                    <constraint firstItem="QU7-fa-T6o" firstAttribute="leading" secondItem="L0y-FE-Uwe" secondAttribute="leading" constant="118" id="0y4-XT-YXa"/>
+                                    <constraint firstItem="QU7-fa-T6o" firstAttribute="top" secondItem="L0y-FE-Uwe" secondAttribute="top" constant="18" id="1HW-4m-g6A"/>
+                                    <constraint firstItem="6dC-s5-ner" firstAttribute="leading" secondItem="QU7-fa-T6o" secondAttribute="leading" type="default" id="39J-py-bob"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZyN-oO-1VN" secondAttribute="bottom" constant="18" id="AsM-CD-kcE"/>
+                                    <constraint firstItem="ZyN-oO-1VN" firstAttribute="trailing" secondItem="6dC-s5-ner" secondAttribute="trailing" type="default" id="DlE-8r-6uo"/>
+                                    <constraint firstItem="6dC-s5-ner" firstAttribute="top" secondItem="L0y-FE-Uwe" secondAttribute="top" constant="41" id="Ehf-sW-UW1"/>
+                                    <constraint firstItem="WYu-XV-MQA" firstAttribute="top" secondItem="L0y-FE-Uwe" secondAttribute="top" type="default" id="KVi-uT-6Vt"/>
+                                    <constraint firstItem="WYu-XV-MQA" firstAttribute="leading" secondItem="L0y-FE-Uwe" secondAttribute="leading" type="default" id="ubc-2E-kcm"/>
+                                    <constraint firstItem="ZyN-oO-1VN" firstAttribute="leading" secondItem="6dC-s5-ner" secondAttribute="leading" type="default" id="zQE-OT-Tkh"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="avatarImageView" destination="WYu-XV-MQA" id="4Zb-5f-jrL"/>
@@ -298,7 +303,7 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="zJ1-3U-ney"/>
+                    <navigationItem key="navigationItem" title="Alumnos" id="zJ1-3U-ney"/>
                     <connections>
                         <segue destination="ceb-Iy-VXS" kind="push" identifier="AlumnosDetail" id="SKo-qO-83u"/>
                     </connections>
@@ -307,16 +312,19 @@
             </objects>
             <point key="canvasLocation" x="-261" y="143"/>
         </scene>
-        <!--View Controller-->
+        <!--Alumno Detail View Controller - Alumno-->
         <scene sceneID="TcO-Q4-CaT">
             <objects>
-                <viewController id="ceb-Iy-VXS" sceneMemberID="viewController">
+                <viewController id="ceb-Iy-VXS" customClass="SWAlumnoDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WQD-wX-m1C">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nombre del alumno" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVw-Sq-ly7">
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="770-ls-ycU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -327,42 +335,48 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="first@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="DHa-Yf-Eq5">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="3OW-ZB-UMs"/>
-                                    <constraint firstAttribute="width" constant="240" id="NMv-FY-Gi7"/>
+                                    <constraint firstAttribute="width" constant="124" id="D4m-Wh-AAw"/>
+                                    <constraint firstAttribute="height" constant="85" id="UMX-66-4w6"/>
                                 </constraints>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-Bj-xsQ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="151" id="Cq6-qD-UT3"/>
+                                    <constraint firstAttribute="height" constant="275" id="KaG-Nc-dyW"/>
                                 </constraints>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="029-mD-EIb" firstAttribute="top" secondItem="WQD-wX-m1C" secondAttribute="top" constant="41" id="1yL-ev-SQH"/>
+                            <constraint firstItem="DHa-Yf-Eq5" firstAttribute="top" secondItem="WQD-wX-m1C" secondAttribute="top" constant="1" id="2a0-h9-uWV"/>
                             <constraint firstItem="HVw-Sq-ly7" firstAttribute="leading" secondItem="WQD-wX-m1C" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3Yt-fU-PAR"/>
-                            <constraint firstAttribute="trailing" secondItem="HVw-Sq-ly7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5y4-ev-Ubd"/>
-                            <constraint firstItem="029-mD-EIb" firstAttribute="top" secondItem="WQD-wX-m1C" secondAttribute="top" constant="60" id="8GK-j8-6M4"/>
                             <constraint firstItem="8KN-Bj-xsQ" firstAttribute="trailing" secondItem="WQD-wX-m1C" secondAttribute="trailing" type="default" id="F9j-hB-Hcs"/>
                             <constraint firstItem="HVw-Sq-ly7" firstAttribute="top" secondItem="WQD-wX-m1C" secondAttribute="top" constant="15" id="IOP-f4-6HL"/>
+                            <constraint firstItem="DHa-Yf-Eq5" firstAttribute="trailing" secondItem="WQD-wX-m1C" secondAttribute="trailing" type="default" id="R5F-GV-Gy0"/>
                             <constraint firstAttribute="trailing" secondItem="029-mD-EIb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="S3d-m3-shB"/>
-                            <constraint firstItem="DHa-Yf-Eq5" firstAttribute="centerX" secondItem="029-mD-EIb" secondAttribute="centerX" type="default" id="Zcm-CX-ENR"/>
-                            <constraint firstItem="8KN-Bj-xsQ" firstAttribute="top" secondItem="WQD-wX-m1C" secondAttribute="top" constant="218" id="ZpG-Ol-vP5"/>
+                            <constraint firstItem="8KN-Bj-xsQ" firstAttribute="top" secondItem="DHa-Yf-Eq5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aXF-Um-AGc"/>
                             <constraint firstItem="029-mD-EIb" firstAttribute="leading" secondItem="WQD-wX-m1C" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cgK-c4-TZx"/>
                             <constraint firstItem="8KN-Bj-xsQ" firstAttribute="leading" secondItem="WQD-wX-m1C" secondAttribute="leading" type="default" id="f1F-7P-ZCv"/>
-                            <constraint firstItem="DHa-Yf-Eq5" firstAttribute="top" secondItem="029-mD-EIb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gx3-bM-nvy"/>
+                            <constraint firstItem="DHa-Yf-Eq5" firstAttribute="leading" secondItem="HVw-Sq-ly7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pGA-DJ-62D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G27-sf-trG"/>
+                    <navigationItem key="navigationItem" title="Alumno" id="G27-sf-trG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="DHa-Yf-Eq5" id="L6w-zV-sQ4"/>
+                        <outlet property="emailLabel" destination="029-mD-EIb" id="YQ4-EC-9sh"/>
+                        <outlet property="mapView" destination="8KN-Bj-xsQ" id="h8P-sY-VRN"/>
+                        <outlet property="nameLabel" destination="HVw-Sq-ly7" id="JRQ-XT-fVr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP1-HQ-dfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352" y="99"/>
+            <point key="canvasLocation" x="349" y="143"/>
         </scene>
-        <!--Clases View Controller - Root View Controller-->
+        <!--Clases Table View Controller - Clases-->
         <scene sceneID="Xd9-Vm-emD">
             <objects>
-                <tableViewController id="dUS-3k-JYp" customClass="SWClasesViewController" sceneMemberID="viewController">
+                <tableViewController id="dUS-3k-JYp" customClass="SWClasesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dlu-tl-bYw">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +405,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Bea-PR-2eZ"/>
+                    <navigationItem key="navigationItem" title="Clases" id="Bea-PR-2eZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="moy-7l-nIv">
+                            <connections>
+                                <action selector="editMode:" destination="dUS-3k-JYp" id="y5V-Gr-vrl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="nGr-Nm-BOF" kind="push" id="P1T-Ms-FSa"/>
                     </connections>
@@ -400,7 +420,7 @@
             </objects>
             <point key="canvasLocation" x="-257" y="812"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Información-->
         <scene sceneID="pES-td-mag">
             <objects>
                 <viewController id="nGr-Nm-BOF" sceneMemberID="viewController">
@@ -409,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OCf-DQ-iY2"/>
+                    <navigationItem key="navigationItem" title="Información" id="OCf-DQ-iY2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Um-aO-Kc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,7 +558,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="2094"/>
         </scene>
-        <!--Resource Deteail View Controller-->
+        <!--Resource Deteail View Controller - Recurso-->
         <scene sceneID="MX4-1i-su7">
             <objects>
                 <viewController id="HhK-lr-GnY" customClass="SWResourceDeteailViewController" sceneMemberID="viewController">
@@ -561,7 +581,7 @@
                             <constraint firstItem="RdL-rt-3uz" firstAttribute="bottom" secondItem="V0c-8d-8oA" secondAttribute="bottom" type="default" id="z3V-NW-LYK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="etR-1e-MCU">
+                    <navigationItem key="navigationItem" title="Recurso" id="etR-1e-MCU">
                         <barButtonItem key="backBarButtonItem" title="Volver" id="5Ch-hV-xxV"/>
                     </navigationItem>
                     <connections>
@@ -576,9 +596,10 @@
         <scene sceneID="WdQ-iA-HzI">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Ps0-6I-rpC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recursos" id="0W7-y0-1Y0"/>
+                    <tabBarItem key="tabBarItem" title="Recursos" image="first.png" id="0W7-y0-1Y0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bPA-4v-KVv">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="N1L-35-CRE" kind="relationship" relationship="rootViewController" id="Qhz-eN-JRR"/>
@@ -607,9 +628,10 @@
         <scene sceneID="cy7-E4-Yu1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2Fj-w5-gkY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clases" id="Zbc-Kp-5EX"/>
+                    <tabBarItem key="tabBarItem" title="Clases" image="first.png" id="Zbc-Kp-5EX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ai-AN-vse">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="dUS-3k-JYp" kind="relationship" relationship="rootViewController" id="JkZ-Xh-3P3"/>
@@ -623,9 +645,10 @@
         <scene sceneID="9i6-Jc-jG1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="sXC-B1-7yh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alumnos" id="ry8-pT-Ftg"/>
+                    <tabBarItem key="tabBarItem" title="Alumnos" image="first.png" id="ry8-pT-Ftg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MH6-u6-SaM">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="yQW-1O-q0D" kind="relationship" relationship="rootViewController" id="6EJ-cq-sVd"/>
@@ -640,48 +663,6 @@
         <image name="first.png" width="30" height="30"/>
         <image name="first@2x.png" width="60" height="60"/>
     </resources>
-    <classes>
-        <class className="AlumnosTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlumnosTableViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SWCellAlumno" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWCellAlumno.h"/>
-            <relationships>
-                <relationship kind="outlet" name="avatarImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="cityLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="emailLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLbl" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SWClasesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWClasesViewController.h"/>
-        </class>
-        <class className="SWResourceDeteailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWResourceDeteailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webview" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="SWResourceFormViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWResourceFormViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="urlTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SWResourcesTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SWResourcesTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showForm:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
